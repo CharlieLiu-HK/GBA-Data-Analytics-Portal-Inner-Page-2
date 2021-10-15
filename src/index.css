@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-title-div {
+  position: absolute;
+  left: 25%;
+  top: 4%;
+}
+.main-title-appear {
+  opacity: 0;
+  transform: translate(-50vw, 0);
+}
+.main-title-appear-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: opacity 1000ms, transform 500ms;
+}
+.main-title-exit {
+  opacity: 1;
+}
+.main-title-exit-active {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 1000ms, transform 700ms;
+}
+
+.intro-paragraph-div {
+  position: absolute;
+  left: 0%;
+  top: 19%;
+}
+.intro-paragraph-appear {
+  opacity: 0;
+  transform: translate(50vw, 0);
+}
+.intro-paragraph-appear-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: opacity 1000ms, transform 500ms;
+}
+.intro-paragraph-exit {
+  opacity: 1;
+}
+.intro-paragraph-exit-active {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 1000ms, transform 700ms;
+}
+
+.main-button-div {
+  position: absolute;
+  left: 43%;
+  top: 90%;
+}
+.main-button-ring {
+  position: absolute;
+  left: 43.4%;
+  top: 90%;
+  animation: palseAnim 0.5s infinite alternate;
+}
+@keyframes palseAnim {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1.15);
+  }
+}
+.main-button-appear {
+  opacity: 0;
+}
+.main-button-appear-active {
+  opacity: 1;
+  transition: opacity 700ms;
+}
+.main-button-exit {
+  opacity: 1;
+}
+.main-button-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.main-widget-enter {
+  opacity: 0;
+  transform: scale(0);
+}
+.main-widget-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 700ms, transform 500ms;
+}
+
+.link-1 {
+  position: absolute;
+  left: 33vw;
+  top: 6vh
+}
+.link-2 {
+  position: absolute;
+  left: 52vw;
+  top: 6vh
+}
+
+.page {
+  position: absolute;
+  left: 5vw;
+  top: 28vh;
+}
+.page-enter {
+  opacity: 0;
+  transform: translate(90vw, 0);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: opacity 700ms, transform 700ms;
+}
+.page-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.page-exit-active {
+  opacity: 0;
+  transform: translate(-90vw, 0);
+  transition: opacity 700ms, transform 700ms;
+}
